@@ -1,0 +1,10 @@
+//ACTION TYPE IMPORTANT WHEN RECIVE AND DISPATCH ALL OF OUR TWEETS TO UPDATE THE STORE
+export const RECEIVE_TWEETS = "RECEIVE_TWEETS";
+
+//OUR RECIVED TWEETS ACTION CTREATORE
+export function receiveTweets(tweets) {
+  return {
+    type: RECEIVE_TWEETS,
+    tweets,
+  };
+}
