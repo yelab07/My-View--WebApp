@@ -5,9 +5,10 @@ import App from "../src/components/App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducers";
+import middleware from "./middleware";
 
 // import reportWebVitals from "./reportWebVitals";
-const store = createStore(reducer);
+const store = createStore(reducer, middleware);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

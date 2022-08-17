@@ -1,11 +1,17 @@
-// import "../App.css";
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import { handleInitialData } from "../actions/shared";
+import Dashboard from "./Dashboard";
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    props.dispatch(handleInitialData());
+  }, []);
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <Dashboard />
     </div>
   );
 }
 
-export default App;
+export default connect()(App);
